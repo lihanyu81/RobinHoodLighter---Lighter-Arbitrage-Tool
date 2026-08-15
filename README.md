@@ -1,5 +1,9 @@
 # RobinHood Lighter ↔ Lighter 价差套利工具
 
+[![Version](https://img.shields.io/badge/version-0.1.0-blue)](#)
+[![Platform](https://img.shields.io/badge/platform-Linux%20x86__64-orange)](#)
+[![GitHub Stars](https://img.shields.io/github/stars/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai?style=social)](https://github.com/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool/stargazers)
+
 本工具用于监控 RobinHood Lighter（RBLighter）与 Lighter 之间的订单簿价差，并根据配置执行双边价差交易。
 
 RBLighter 与 Lighter 使用相近的交易原理，但属于两个独立的交易所实例，订单簿、账户、API Key、Market Index 和账户状态彼此独立。本项目通过同时读取两边行情，在满足策略和风控条件时并行执行两腿订单。
