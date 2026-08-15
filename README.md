@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/badge/version-0.1.0-blue)](#)
 [![Platform](https://img.shields.io/badge/platform-Linux%20x86__64-orange)](#)
-[![GitHub Stars](https://img.shields.io/github/stars/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai?style=social)](https://github.com/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool?style=social)](https://github.com/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool/stargazers)
 
 本工具用于监控 RobinHood Lighter（RBLighter）与 Lighter 之间的订单簿价差，并根据配置执行双边价差交易。
 
