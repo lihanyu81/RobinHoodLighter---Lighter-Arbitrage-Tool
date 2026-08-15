@@ -167,9 +167,7 @@ RBLIGHTER_ACCOUNT_INDEX=
 RBLIGHTER_API_KEY_INDEX=
 RBLIGHTER_API_PRIVATE_KEY=
 
-# 可选：邀请人查询凭证，用于启动前读取全部被邀请钱包
-RBLIGHTER_REFERRAL_API_KEY_INDEX=
-RBLIGHTER_REFERRAL_API_PRIVATE_KEY=
+
 ```
 
 必须分别创建并填写两边交易账户的 API Key。API 私钥、钱包私钥、助记词和 Token 不要发送给任何人，也不要提交到 GitHub。
@@ -254,13 +252,27 @@ http://127.0.0.1:8000
 
 ## 后台运行
 
-临时后台运行：
+SSH 隧道后台运行：
 
 ```bash
 nohup ./panda-arb-0.1.0-linux-x64-onefile serve \
   --env ~/.config/panda-arb/.env \
   --data-dir ~/panda-arb-data \
   --host 127.0.0.1 \
+  --port 8000 \
+  --no-browser \
+  > ~/panda-arb-data/panda-arb.log 2>&1 &
+
+echo $! > ~/panda-arb-data/panda-arb.pid
+```
+
+公网后台运行：
+
+```bash
+nohup ./panda-arb-0.1.0-linux-x64-onefile serve \
+  --env ~/.config/panda-arb/.env \
+  --data-dir ~/panda-arb-data \
+  --host 0.0.0.0 \
   --port 8000 \
   --no-browser \
   > ~/panda-arb-data/panda-arb.log 2>&1 &
