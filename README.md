@@ -32,6 +32,8 @@ RBLighter 与 Lighter 使用相近的交易原理，但属于两个独立的交�
 
 本工具不构成投资建议，不承诺收益。使用者应自行承担交易、账户和资金风险。
 
+---
+
 ## 核心逻辑
 
 - 读取 RBLighter 与 Lighter 的实时订单簿。
@@ -42,6 +44,8 @@ RBLighter 与 Lighter 使用相近的交易原理，但属于两个独立的交�
 - 单腿成交、部分成交、仓位延迟或状态不明确时，进入补偿、暂停或恢复流程。
 - 定时读取两边仓位、标记价和强平价，触发风控时使用 reduce-only 订单恢复到安全状态。
 - 停止或重启后会恢复已保存任务；无法确认状态时默认暂停开仓，不猜测性重复下单。
+
+---
 
 ## RBLighter 账户关系校验
 
@@ -67,6 +71,8 @@ RBLIGHTER_REFERRAL_API_PRIVATE_KEY=
 
 如果这两个配置为空，程序会尝试使用 `RBLIGHTER_API_KEY_INDEX` 和 `RBLIGHTER_API_PRIVATE_KEY` 查询邀请关系；只有当这套凭证属于邀请人账户时才适用。邀请人 API 私钥与交易 API 私钥都必须严格保密。
 
+---
+
 ## 官方接口
 
 - RBLighter REST：<https://api.rh.lighter.xyz>
@@ -76,6 +82,8 @@ RBLIGHTER_REFERRAL_API_PRIVATE_KEY=
 - RobinHood Lighter API 文档：<https://apidocs.rh.lighter.xyz/docs/get-started>
 
 两边的账户和 API Key 必须分别配置，不能把 Lighter 的账户或 API Key 填入 RBLighter 配置。
+
+---
 
 ## Linux 运行环境
 
@@ -99,6 +107,8 @@ x86_64
 ```
 
 如果输出为 `aarch64` 或 `arm64`，当前 Linux x64 文件不能直接运行，需要单独构建 ARM 版本。
+
+---
 
 ## 下载 Linux 单文件版本
 
@@ -132,6 +142,8 @@ panda-arb-0.1.0-linux-x64-onefile: OK
 chmod +x panda-arb-0.1.0-linux-x64-onefile
 ./panda-arb-0.1.0-linux-x64-onefile --help
 ```
+
+---
 
 ## 配置文件与数据目录
 
@@ -195,6 +207,8 @@ RBLIGHTER_API_PRIVATE_KEY=
   --network
 ```
 
+---
+
 ## 实盘启用流程
 
 建议严格按照以下顺序操作：
@@ -215,6 +229,8 @@ ENABLE_REAL_MARKET_STREAMS=true
 ```
 
 实盘启动时，程序会先执行 RBLighter 邀请关系校验。校验失败时不会验证交易 API Key，也不会执行 `restore_tasks` 或启动账户流。
+
+---
 
 ## 启动服务
 
@@ -255,6 +271,8 @@ http://127.0.0.1:8000
 ```
 
 公网访问会增加管理页面、账户状态和交易控制暴露风险。安全组来源地址应尽量限制为自己的固定 IP，不要直接开放 `0.0.0.0/0`。
+
+---
 
 ## 后台运行
 
@@ -305,6 +323,8 @@ kill -9 "$(cat ~/panda-arb-data/panda-arb.pid)"
 ```
 
 长期运行建议使用 `systemd`，并为配置文件和数据目录设置最小权限。
+
+---
 
 ## 端口检查与故障排查
 
@@ -384,6 +404,8 @@ kill PID
 
 配置文件由 `--env` 指定，数据库和运行数据由 `--data-dir` 指定。推荐将两者放在可执行文件之外，便于升级程序时保留任务状态和配置。
 
+---
+
 ## 封包与文件说明
 
 Linux 单文件程序已经包含：
@@ -403,6 +425,8 @@ Linux 单文件程序已经包含：
 - 项目源码
 
 当前仓库只发布可执行文件和 SHA-256 校验文件。升级程序时，请先校验新文件，再使用原来的外置配置和数据目录启动。
+
+---
 
 ## 支持与反馈
 
