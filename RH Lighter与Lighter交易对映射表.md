@@ -1,6 +1,6 @@
-# RH Lighter 与 Lighter 交易对映射表
+# RB Lighter 与 Lighter 交易对映射表
 
-本表用于记录 RH Lighter（RBLighter）与 Lighter 之间可进行价差套利的同名永续合约映射关系。
+本表用于记录 RB Lighter 与 Lighter 之间可进行价差套利的同名永续合约映射关系。
 
 数据来源：两边的 `GET /api/v1/orderBookDetails` 接口。
 
@@ -8,7 +8,7 @@
 
 本次查询结果：Lighter 有 210 个活跃永续市场，RH Lighter 有 40 个活跃永续市场，按交易标的交集得到 36 个映射。
 
-| 标的 | Lighter Symbol | Lighter Market Index | RH Lighter Symbol | RH Lighter Market Index |
+| 标的 | Lighter Symbol | Lighter Market Index | RB Lighter Symbol | RB Lighter Index |
 |---|---|---:|---|---:|
 | AAPL | AAPL | 113 | AAPL | 10 |
 | AMD | AMD | 138 | AMD | 29 |
@@ -50,7 +50,7 @@
 ## 使用说明
 
 1. `Lighter Market Index` 只能用于 Lighter。
-2. `RH Lighter Market Index` 只能用于 RH Lighter。
+2. `RB Lighter Market Index` 只能用于 RH Lighter。
 3. 即使两个交易所的 Symbol 相同，也不能复用对方的 Market Index、账户 Index 或 API Key。
 4. 下单数量精度、价格精度、最小下单量和 tick size 也必须分别使用对应交易所的市场元数据。
 5. 市场会新增、下线或调整参数，表格不能替代启动前的动态核验。
