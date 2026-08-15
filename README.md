@@ -1,3 +1,7 @@
+##### 关注我 **X (Twitter)**: [@臭臭panda](https://x.com/Chosmos110)
+
+---
+
 # RobinHood Lighter ↔ Lighter 价差套利工具
 
 [![Version](https://img.shields.io/badge/version-0.1.0-blue)](#)
@@ -9,6 +13,8 @@
 RBLighter 与 Lighter 使用相近的交易原理，但属于两个独立的交易所实例，订单簿、账户、API Key、Market Index 和账户状态彼此独立。本项目通过同时读取两边行情，在满足策略和风控条件时并行执行两腿订单。
 
 当前公开发布版本为 Linux x86_64 单文件程序，不包含项目源码、用户配置、数据库或交易凭据。
+
+---
 
 ## 使用前须知
 
