@@ -94,6 +94,24 @@ RBLIGHTER_REFERRAL_API_PRIVATE_KEY=
 - 建议 2 核 CPU、2 GB 或以上内存
 - 稳定、低延迟的网络环境
 
+可根据所在地区、支付方式和网络质量选择云服务器：
+
+1. [Vultr](https://www.vultr.com/?ref=9915549-9J)
+2. [阿里云](https://www.aliyun.com/minisite/goods?userCode=bwzu4y9m)
+3. [腾讯云](https://curl.qcloud.com/eOn6o376)
+
+| 项目 | 建议配置 |
+|---|---|
+| 操作系统 | Ubuntu 22.04/24.04 或其他主流 Linux |
+| CPU | 2 核及以上 |
+| 内存 | 2 GB 及以上 |
+| 架构 | x86_64 |
+| 磁盘 | 20 GB 及以上 |
+| 网络 | 稳定、低延迟 |
+| 地区 | 推荐：日本 |
+
+优惠活动、赠金条件和有效期可能随时变化，请以厂商官方页面显示的信息为准。
+
 检查服务器架构：
 
 ```bash
