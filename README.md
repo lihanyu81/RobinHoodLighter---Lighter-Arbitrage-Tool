@@ -1,3 +1,15 @@
+<p align="center">
+  <a href="README.md"><img src="https://img.shields.io/badge/简体中文-中文-1f6feb?style=for-the-badge" alt="简体中文"></a>
+  <a href="README.en.md"><img src="https://img.shields.io/badge/EN-English-555?style=for-the-badge" alt="English"></a>
+  <a href="README.ja.md"><img src="https://img.shields.io/badge/日本語-日本語-555?style=for-the-badge" alt="日本語"></a>
+  <a href="README.ko.md"><img src="https://img.shields.io/badge/한국어-한국어-555?style=for-the-badge" alt="한국어"></a>
+  <a href="README.es.md"><img src="https://img.shields.io/badge/ES-Español-555?style=for-the-badge" alt="Español"></a>
+  <a href="README.de.md"><img src="https://img.shields.io/badge/DE-Deutsch-555?style=for-the-badge" alt="Deutsch"></a>
+  <a href="README.fr.md"><img src="https://img.shields.io/badge/FR-Français-555?style=for-the-badge" alt="Français"></a>
+  <a href="README.it.md"><img src="https://img.shields.io/badge/IT-Italiano-555?style=for-the-badge" alt="Italiano"></a>
+  <a href="README.pt.md"><img src="https://img.shields.io/badge/PT-Português-555?style=for-the-badge" alt="Português"></a>
+</p>
+
 ##### 关注我 **X (Twitter)**: [@臭臭panda](https://x.com/Chosmos110)
 ##### 返佣业务 **各大平台返佣BN20 OK40 BG40 GATE60 BYBIT40 长期可加**: [@熊猫寨返佣机器人](https://t.me/RebateGobot)
 ##### AI代充 **完美售后 GPTPRO 130 5X 620 20X 1230**: [@熊猫寨自营业务](https://service.pandazhai.com/products)
