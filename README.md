@@ -459,7 +459,7 @@ Linux 单文件程序已经包含：
 
 ## 支持与反馈
 
-Telegram 社区：<https://t.me/+e4p8Vq1ABGthODM1>
+Telegram 社区：<https://t.me/+HmFWrmcW9w01YzFl>
 
 反馈问题时可以提供：
 
