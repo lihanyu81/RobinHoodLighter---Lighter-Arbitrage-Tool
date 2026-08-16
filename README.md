@@ -1,5 +1,5 @@
 ##### 关注我 **X (Twitter)**: [@臭臭panda](https://x.com/Chosmos110)
-##### 返佣业务 **各大平台返佣BN20 OK40 BG40 GATE60 BYBIT40 长期可加**: [@熊猫寨返佣机器人](https://t.me/test00www2bot)
+##### 返佣业务 **各大平台返佣BN20 OK40 BG40 GATE60 BYBIT40 长期可加**: [@熊猫寨返佣机器人](https://t.me/RebateGobot)
 ##### AI代充 **完美售后 GPTPRO 130 5X 620 20X 1230**: [@熊猫寨自营业务](https://service.pandazhai.com/products)
 ---
 
