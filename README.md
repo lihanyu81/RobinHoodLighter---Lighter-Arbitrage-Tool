@@ -64,25 +64,22 @@ RBLighter 与 Lighter 使用相近的交易原理，但属于两个独立的交�
 
 实盘启动前，程序会先核验 RBLighter 账户是否属于指定邀请关系：
 
-1. 查询邀请人钱包的公开 Account Index。
-2. 使用邀请人查询凭证读取已邀请钱包列表。
-3. 查询每个被邀请钱包对应的 Account Index，形成动态允许范围。
-4. 检查 `RBLIGHTER_ACCOUNT_INDEX` 是否属于邀请人或已邀请钱包。
-5. 不属于允许范围时立即终止，不会继续验证交易 API Key，也不会恢复任务或启动账户流。
-6. 通过账户关系校验后，才验证交易账户 API Key 并启动实盘服务。
+1. 将 `RBLIGHTER_ACCOUNT_INDEX` 提交到只读推荐关系验证服务。
+2. 验证服务在自己的服务器上刷新推荐名单并返回 `approved`。
+3. 检查 `approved` 是否为 `true`；不通过时立即终止，不会继续验证交易 API Key，也不会恢复任务或启动账户流。
+4. 通过账户关系校验后，才验证交易账户 API Key 并启动实盘服务。
 
-后续新增的被邀请钱包会在下一次启动时自动查询。拒绝提示会提供注册链接：
+验证服务会在请求时刷新推荐名单。拒绝提示会提供注册链接：
 
 <https://robinhoodchain.lighter.xyz/?referral=PANDAZHAI>
 
-如果交易账户不是邀请人账户，请配置邀请人专用查询凭证：
+验证服务地址可通过以下配置覆盖：
 
 ```env
-RBLIGHTER_REFERRAL_API_KEY_INDEX=
-RBLIGHTER_REFERRAL_API_PRIVATE_KEY=
+RBLIGHTER_REFERRAL_VERIFICATION_URL=http://43.165.190.162:8001
 ```
 
-如果这两个配置为空，程序会尝试使用 `RBLIGHTER_API_KEY_INDEX` 和 `RBLIGHTER_API_PRIVATE_KEY` 查询邀请关系；只有当这套凭证属于邀请人账户时才适用。邀请人 API 私钥与交易 API 私钥都必须严格保密。
+推荐人 API 私钥只保存在验证服务上，不需要配置到交易程序所在服务器。
 
 ---
 
@@ -215,7 +212,8 @@ RBLIGHTER_WS_URL=wss://api.rh.lighter.xyz/stream
 RBLIGHTER_ACCOUNT_INDEX=
 RBLIGHTER_API_KEY_INDEX=
 RBLIGHTER_API_PRIVATE_KEY=
-
+# Read-only referral verification service
+RBLIGHTER_REFERRAL_VERIFICATION_URL=http://43.165.190.162:8001
 
 ```
 
@@ -397,7 +395,7 @@ uname -m
 
 - `RBLIGHTER_ACCOUNT_INDEX` 填写的是正确账户的 Account Index。
 - 该账户属于邀请人或已邀请钱包。
-- 如果使用被邀请账户交易，已配置邀请人查询凭证。
+- 推荐关系验证服务地址可访问并返回有效的 `approved` 字段。
 - RBLighter API 地址没有误填为 Lighter 地址。
 
 账户关系校验失败时，程序会在 API Key 验证前退出，不会启动交易流。
