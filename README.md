@@ -213,9 +213,6 @@ RBLIGHTER_ACCOUNT_INDEX=
 RBLIGHTER_API_KEY_INDEX=
 RBLIGHTER_API_PRIVATE_KEY=
 
-# Read-only referral verification service
-RBLIGHTER_REFERRAL_VERIFICATION_URL=http://43.165.190.162:8001
-
 # Optional notifications. Secrets are read from environment only and never persisted/logged.
 TELEGRAM_BOT_TOKEN=
 TELEGRAM_CHAT_ID=
