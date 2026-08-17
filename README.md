@@ -146,20 +146,20 @@ x86_64
 mkdir -p ~/rblighter-arbitrage
 cd ~/rblighter-arbitrage
 
-curl -fLO https://github.com/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool/raw/main/panda-arb-0.1.0-linux-x64-onefile
-curl -fLO https://github.com/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool/raw/main/panda-arb-0.1.0-linux-x64-onefile.sha256
+curl -fLO https://github.com/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool/raw/main/panda-arb-0.2.0-linux-x64-onefile
+curl -fLO https://github.com/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool/raw/main/panda-arb-0.2.0-linux-x64-onefile.sha256
 ```
 
 校验文件：
 
 ```bash
-sha256sum -c panda-arb-0.1.0-linux-x64-onefile.sha256
+sha256sum -c panda-arb-0.2.0-linux-x64-onefile.sha256
 ```
 
 必须看到：
 
 ```text
-panda-arb-0.1.0-linux-x64-onefile: OK
+panda-arb-0.2.0-linux-x64-onefile: OK
 ```
 
 校验失败、文件不存在或哈希值不一致时，不要继续运行，应重新下载并确认仓库地址。
@@ -167,8 +167,8 @@ panda-arb-0.1.0-linux-x64-onefile: OK
 添加执行权限并查看帮助：
 
 ```bash
-chmod +x panda-arb-0.1.0-linux-x64-onefile
-./panda-arb-0.1.0-linux-x64-onefile --help
+chmod +x panda-arb-0.2.0-linux-x64-onefile
+./panda-arb-0.2.0-linux-x64-onefile --help
 ```
 
 ---
@@ -222,7 +222,7 @@ RBLIGHTER_REFERRAL_VERIFICATION_URL=http://43.165.190.162:8001
 检查配置：
 
 ```bash
-./panda-arb-0.1.0-linux-x64-onefile config check \
+./panda-arb-0.2.0-linux-x64-onefile config check \
   --env ~/.config/panda-arb/.env \
   --data-dir ~/panda-arb-data
 ```
@@ -230,7 +230,7 @@ RBLIGHTER_REFERRAL_VERIFICATION_URL=http://43.165.190.162:8001
 检查依赖、签名库和网络：
 
 ```bash
-./panda-arb-0.1.0-linux-x64-onefile doctor \
+./panda-arb-0.2.0-linux-x64-onefile doctor \
   --env ~/.config/panda-arb/.env \
   --data-dir ~/panda-arb-data \
   --network
@@ -266,7 +266,7 @@ ENABLE_REAL_MARKET_STREAMS=true
 推荐只监听本机地址：
 
 ```bash
-./panda-arb-0.1.0-linux-x64-onefile serve \
+./panda-arb-0.2.0-linux-x64-onefile serve \
   --env ~/.config/panda-arb/.env \
   --data-dir ~/panda-arb-data \
   --host 127.0.0.1 \
@@ -291,7 +291,7 @@ http://127.0.0.1:8000
 如果确实需要监听公网地址：
 
 ```bash
-./panda-arb-0.1.0-linux-x64-onefile serve \
+./panda-arb-0.2.0-linux-x64-onefile serve \
   --env ~/.config/panda-arb/.env \
   --data-dir ~/panda-arb-data \
   --host 0.0.0.0 \
@@ -308,7 +308,7 @@ http://127.0.0.1:8000
 SSH 隧道后台运行：
 
 ```bash
-nohup ./panda-arb-0.1.0-linux-x64-onefile serve \
+nohup ./panda-arb-0.2.0-linux-x64-onefile serve \
   --env ~/.config/panda-arb/.env \
   --data-dir ~/panda-arb-data \
   --host 127.0.0.1 \
@@ -322,7 +322,7 @@ echo $! > ~/panda-arb-data/panda-arb.pid
 公网后台运行：
 
 ```bash
-nohup ./panda-arb-0.1.0-linux-x64-onefile serve \
+nohup ./panda-arb-0.2.0-linux-x64-onefile serve \
   --env ~/.config/panda-arb/.env \
   --data-dir ~/panda-arb-data \
   --host 0.0.0.0 \
@@ -376,7 +376,7 @@ sudo lsof -nP -iTCP:8000 -sTCP:LISTEN
 重新添加执行权限：
 
 ```bash
-chmod +x panda-arb-0.1.0-linux-x64-onefile
+chmod +x panda-arb-0.2.0-linux-x64-onefile
 ```
 
 ### `Exec format error`
@@ -421,7 +421,7 @@ kill PID
 也可以使用其他端口：
 
 ```bash
-./panda-arb-0.1.0-linux-x64-onefile serve \
+./panda-arb-0.2.0-linux-x64-onefile serve \
   --env ~/.config/panda-arb/.env \
   --data-dir ~/panda-arb-data \
   --host 127.0.0.1 \
