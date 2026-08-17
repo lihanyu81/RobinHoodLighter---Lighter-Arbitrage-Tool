@@ -17,7 +17,7 @@
 
 # RobinHood Lighter ↔ Lighter 价差套利工具
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue)](#)
+[![Version](https://img.shields.io/badge/version-0.2.0-blue)](#)
 [![Platform](https://img.shields.io/badge/platform-Linux%20x86__64-orange)](#)
 [![GitHub Stars](https://img.shields.io/github/stars/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool?style=social)](https://github.com/lihanyu81/RobinHoodLighter---Lighter-Arbitrage-Tool/stargazers)
 
