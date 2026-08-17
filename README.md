@@ -179,7 +179,7 @@ chmod +x panda-arb-0.2.0-linux-x64-onefile
 
 ```bash
 mkdir -p ~/.config/panda-arb ~/panda-arb-data
-./panda-arb-0.1.0-linux-x64-onefile config init \
+./panda-arb-0.2.0-linux-x64-onefile config init \
   --output ~/.config/panda-arb/.env
 chmod 600 ~/.config/panda-arb/.env
 ```
