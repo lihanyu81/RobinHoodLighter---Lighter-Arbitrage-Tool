@@ -1,3 +1,5 @@
+# 此项目已迁移至 https://pandazhai.com/guide 新版更方便可直接一键部署
+
 <p align="center">
   <a href="README.md"><img src="https://img.shields.io/badge/简体中文-中文-1f6feb?style=for-the-badge" alt="简体中文"></a>
   <a href="README.en.md"><img src="https://img.shields.io/badge/EN-English-555?style=for-the-badge" alt="English"></a>
